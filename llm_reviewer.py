@@ -1,6 +1,10 @@
 from google import genai
 import time
 import streamlit as st
+import streamlit as st
+import os
+
+
 @st.cache_data(show_spinner=False)
 def get_learning_roadmap_cached(cv_skills, job_skills, job_title):
     return get_learning_roadmap(cv_skills, job_skills, job_title)
@@ -8,6 +12,8 @@ def get_learning_roadmap_cached(cv_skills, job_skills, job_title):
 @st.cache_data(show_spinner=False)
 def review_cv_cached(cv_text, job_skills, job_title):
     return review_cv_with_llm(cv_text, job_skills, job_title)
+# Thay vì dán trực tiếp "AIza...", ta dùng st.secrets
+api_key = st.secrets["GEMINI_API_KEY"]
 # --- CẤU HÌNH TRUNG TÂM ---
 GEMINI_API_KEY = "AIzaSyDrI0IZvTjUnS29eENGrrwt39ZFlzjtoF4"
 
