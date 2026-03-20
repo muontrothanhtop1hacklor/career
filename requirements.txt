@@ -4,3 +4,5 @@ plotly
 google-genai
 thefuzz
 opencv-python-headless
+pymupdf
+python-docx
