@@ -1,0 +1,6 @@
+streamlit
+pandas
+plotly
+google-genai
+thefuzz
+opencv-python-headless
